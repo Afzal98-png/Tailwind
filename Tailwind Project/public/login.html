@@ -1,0 +1,101 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+</head>
+<body>
+
+    <main x-data="{ open : false }">
+
+        <div class="bg-black flex p-5">
+            <div class="bg-transparent cursor-pointer transform scale-150 pt-2 pl-2">
+                <button class="menu-bar-btn" @click="open = !open" @click.away="open = false">
+                    <svg style="color: white;" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                  </button>
+            </div>
+
+            <div class="mx-auto">
+                <img src="images/logo.svg" alt="logo image">
+            </div>
+
+            <div class="hidden">
+                <nav>
+                    <ul>
+                        <li>
+                            <h1>Home</h1>
+                        </li>
+                        <li>
+                            <h1>Contacts</h1>
+                        </li>
+                        <li>
+                            <a href="login.html"><h1>Login</h1></a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+
+        </div>
+
+        <div class="bg-black text-white font-medium pl-7 pb-5 text-lg" x-show="open">
+            <nav>
+                <ul>
+                    <li>
+                        <h1>Home</h1>
+                    </li>
+                    <li>
+                        <h1>Contacts</h1>
+                    </li>
+                    <li>
+                        <a href="login.html"><h1>Login</h1></a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+    </main>
+
+    <section>
+
+        <div w-60 h-60>
+
+        </div>
+
+    </section>
+
+    <footer class="bg-black pt-20 pb-10 pl-20">
+
+        <div class="flex flex-col items-center"> 
+            <div class=" pb-20 w-60">
+                <h1 class="text-2xl font-bold pb-5 text-white">Links</h1>
+                <p class="text-gray-400">www.purecodes.com</p>
+                <p class="text-gray-400">www.ontracx.com</p>
+            </div>
+
+            <div class="pb-20 w-60">
+                <h1 class="text-2xl font-bold pb-5 text-white">Socail icons</h1>
+                <div class="flex">
+                    <img class="w-8 h-8 " src="images/facebook.png" alt="fb image">
+                    <img class="w-8 h-8" src="images/instagram.png" alt="insta image">
+                    <img class="w-8 h-8" src="images/twitter.png" alt="twitter image">
+                    <img class="w-8 h-8" src="images/linkedin.png" alt="linkedin image"> 
+                </div>
+            </div>
+
+            <div class="w-60">
+                <h1 class="text-2xl font-bold pb-5 text-white">Address</h1>
+                <p class="text-gray-400">Spinzar Plaza 4rth Floor F30</p>
+                <p class="text-gray-400">@2021 Pure Codes</p> 
+            </div>
+            
+        </div>
+
+    </footer>
+
+</body>
+</html>
