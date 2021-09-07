@@ -1,0 +1,23 @@
+{
+  "name": "purecodes-project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build-css": "tailwindcss build src/styles.css -o public/styles.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Afzal98-png/Purecodes-Project.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Afzal98-png/Purecodes-Project/issues"
+  },
+  "homepage": "https://github.com/Afzal98-png/Purecodes-Project#readme",
+  "dependencies": {
+    "tailwindcss": "^2.2.10"
+  }
+}

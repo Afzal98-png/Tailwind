@@ -1,0 +1,186 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tailwind Project</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+</head>
+<body>
+
+    <main x-data="{ open : false }">
+
+        <div class="bg-black flex p-5">
+            <div class="bg-transparent cursor-pointer transform scale-150 pt-2 pl-2">
+                <button class="menu-bar-btn" @click="open = !open" @click.away="open = false">
+                    <svg style="color: white;" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                  </button>
+            </div>
+
+            <div class="mx-auto">
+                <img src="images/logo.svg" alt="logo image">
+            </div>
+
+            <div class="hidden">
+                <nav>
+                    <ul>
+                        <li>
+                            <h1>Home</h1>
+                        </li>
+                        <li>
+                            <h1>Contacts</h1>
+                        </li>
+                        <li>
+                            <a href="login.html"><h1>Login</h1></a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+
+        </div>
+
+        <div class="bg-black text-white font-medium pl-7 pb-5 text-lg" x-show="open">
+            <nav>
+                <ul>
+                    <li>
+                        <h1>Home</h1>
+                    </li>
+                    <li>
+                        <h1>Contacts</h1>
+                    </li>
+                    <li>
+                        <a href="login.html"><h1>Login</h1></a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+        <div>
+            <img src="images/banner.jpg" alt="banner">
+        </div>
+
+    </main>
+
+    <section class="my-28">
+
+        <div class="font-medium text-center text-3xl pb-20">
+            <h1>Features</h1>
+        </div>
+
+        <div class="flex flex-col mx-auto">
+            <div class="flex flex-col">
+                <div class="pb-20">
+                    <img class="" src="images/laptop2.jfif" alt="laptop image">
+                    <h1>Laptop</h1>
+                    <p class="w-40">IPhone, a multipurpose handheld computing device combining
+                        mobile telephone, digital camera, music player, and personal
+                        computing technologies.
+                    </p>
+                </div>
+
+                <div class="pb-20">
+                    <img src="images/iphone.jfif" alt="phone image">
+                    <h1>Iphone</h1>
+                    <p>IPhone, a multipurpose handheld computing device combining
+                        mobile telephone, digital camera, music player, and personal
+                        computing technologies.
+                    </p>
+                </div>
+            </div>
+
+            <div>
+                <div class="pb-20"> 
+                    <img src="images/tablet.jfif" alt="tablet image">
+                    <h1>Tablet</h1>
+                    <p>IPhone, a multipurpose handheld computing device combining
+                        mobile telephone, digital camera, music player, and personal
+                        computing technologies.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <section>
+
+        <div>
+            <h1>Testimenials</h1>
+        </div>
+
+        <div>
+            <div>
+                <div>
+                    <img src="images/watch.jfif" alt="watch pic">
+                </div>
+                <div>
+                    <h1>Watch</h1>
+                     <p>IPhone, a multipurpose handheld computing device combining
+                        mobile telephone, digital camera, music player, and personal
+                        computing technologies.
+                     </p>
+                </div>
+            </div>
+
+            <div>
+                <div>
+                    <img src="images/mic.jfif" alt="mic pic">
+                </div>
+                <div>
+                    <h1>Mic</h1>
+                     <p>IPhone, a multipurpose handheld computing device combining
+                        mobile telephone, digital camera, music player, and personal
+                        computing technologies.
+                     </p>
+                </div>
+            </div>
+
+            <div>
+                <div>
+                    <img src="images/keyboard.jfif" alt="keyboard pic">
+                </div>
+                <div>
+                    <h1>keyboard</h1>
+                     <p>IPhone, a multipurpose handheld computing device combining
+                        mobile telephone, digital camera, music player, and personal
+                        computing technologies.
+                     </p>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <footer>
+
+        <div>
+            <div>
+                <h1>Links</h1>
+                <p>www.purecodes.com</p>
+                <p>www.ontracx.com</p>
+            </div>
+
+            <div>
+                <h1>Socail icons</h1>
+                <img src="images/facebook.png" alt="fb image">
+                <img src="images/instagram.png" alt="insta image">
+                <img src="images/twitter.png" alt="twitter image">
+                <img src="images/linkedin.png" alt="linkedin image">
+            </div>
+
+            <div>
+                <h1>Address</h1>
+                <p>Spinzar Plaza 4rth Floor Office No 30</p>
+                <p>@2021 Pure Codes</p> 
+            </div>
+        </div>
+
+    </footer>
+
+
+
+</body>
+</html>
