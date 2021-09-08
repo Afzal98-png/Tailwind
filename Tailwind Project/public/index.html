@@ -11,8 +11,8 @@
 
     <main x-data="{ open : false }">
 
-        <div class="bg-black flex p-5">
-            <div class="bg-transparent cursor-pointer transform scale-150 pt-2 pl-2">
+        <div class="bg-black flex p-5 md:p-0 flex justify-between items-center">
+            <div class="bg-transparent cursor-pointer transform scale-150 pt-2 pl-2 md:hidden">
                 <button class="menu-bar-btn" @click="open = !open" @click.away="open = false">
                     <svg style="color: white;" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
@@ -20,17 +20,17 @@
                   </button>
             </div>
 
-            <div class="mx-auto">
+            <div class="m-auto pl-10 md:pr-96 md:m-0 ">
                 <img src="images/logo.svg" alt="logo image">
             </div>
 
-            <div class="hidden">
-                <nav>
-                    <ul>
-                        <li>
+            <div class="hidden text-white md:flex pr-10 font-medium pl-7 pb-5 text-lg pt-5">
+                <nav class="">
+                    <ul class="flex"> 
+                        <li class="pr-5">
                             <h1>Home</h1>
                         </li>
-                        <li>
+                        <li class="pr-5">
                             <h1>Contacts</h1>
                         </li>
                         <li>
@@ -42,7 +42,7 @@
 
         </div>
 
-        <div class="bg-black text-white font-medium pl-7 pb-5 text-lg" x-show="open">
+        <div class="bg-black text-white font-medium pl-7 pb-5 text-lg md:hidden" x-show="open">
             <nav>
                 <ul>
                     <li>
@@ -58,44 +58,46 @@
             </nav>
         </div>
 
+    </main>
+
+    <section>
         <div>
             <img src="images/banner.jpg" alt="banner">
         </div>
+    </section>
 
-    </main>
+    <section class="mt-28">
 
-    <section class="my-28">
-
-        <div class="font-medium text-center text-3xl pb-20">
+        <div class="font-bold text-center text-2xl pb-24">
             <h1>Features</h1>
         </div>
 
-        <div class="text-center">
-            <div class="">
-                <div class="pb-20">
-                    <img class="" src="images/laptop2.jfif" alt="laptop image">
-                    <h1 class="text-2xl font-bold pb-5">Laptop</h1>
-                    <p class="text-gray-500">IPhone, a multipurpose handheld computing device combining
+        <div class="px-24 lg:flex justify-around px-0">
+            <div class="md:flex justify-around lg:pr-1">
+                <div class="pb-20 md:pr-10 lg:pr-20 pt-8">
+                    <img class="pb-7 pl-5 lg:" src="images/laptop2.jfif" alt="laptop image">
+                    <h1 class="text-2xl font-bold pb-5 md:pt-1 lg:pt-1 ">Laptop</h1>
+                    <p class="text-gray-500 w-80 " >IPhone, a multipurpose handheld computing device combining
                         mobile telephone, digital camera, music player, and personal
                         computing technologies.
                     </p>
                 </div>
 
-                <div class="pb-20">
-                    <img src="images/iphone.jfif" alt="phone image">
+                <div class="pb-20 lg:pr-10 pt-3">
+                    <img class= "pb-7 pl-5" src="images/iphone.jfif" alt="phone image">
                     <h1 class="text-2xl font-bold pb-5">Iphone</h1>
-                    <p class="text-gray-500 w-60">IPhone, a multipurpose handheld computing device combining
+                    <p class="text-gray-500 w-80">IPhone, a multipurpose handheld computing device combining
                         mobile telephone, digital camera, music player, and personal
                         computing technologies.
                     </p>
                 </div>
             </div>
 
-            <div>
-                <div class="pb-20"> 
-                    <img src="images/tablet.jfif" alt="tablet image">
+            <div class="md:flex justify-center">
+                <div class="lg:"> 
+                    <img class= "pb-7 pl-5" src="images/tablet.jfif" alt="tablet image">
                     <h1 class="text-2xl font-bold pb-5">Tablet</h1>
-                    <p class="text-gray-500">IPhone, a multipurpose handheld computing device combining
+                    <p class="text-gray-500 w-80">IPhone, a multipurpose handheld computing device combining
                         mobile telephone, digital camera, music player, and personal
                         computing technologies.
                     </p>
@@ -105,46 +107,46 @@
 
     </section>
 
-    <section class="my-28">
+    <section class="mb-28 mt-10">
 
-        <div class="py-20 font-medium text-center text-3xl pb-20">
+        <div class="py-20 font-bold text-center text-2xl pb-20">
             <h1>Testimenials</h1>
         </div>
 
-        <div class="px-24">
-            <div class="mb-20">
-                <div>
-                    <img src="images/watch.jfif" alt="watch pic">
+        <div class="px-24 overflow-y-auto h-full md:flex flex-col items-center h-96">
+            <div class="mb-20 md:flex lg:px-80">
+                <div class="pl-5 pb-5 md: relative bottom-5">
+                    <img  src="images/watch.jfif" alt="watch pic">
                 </div>
-                <div>
+                <div class="md: relative top-5">
                     <h1 class="text-2xl font-bold pb-5">Watch</h1>
-                     <p class="text-gray-500">IPhone, a multipurpose handheld computing device combining
+                     <p class="text-gray-500 w-80">IPhone, a multipurpose handheld computing device combining
                         mobile telephone, digital camera, music player, and personal
                         computing technologies.
                      </p>
                 </div>
             </div>
 
-            <div class="mb-20">
-                <div>
+            <div class="mb-20 md:flex lg:px-64">
+                <div class="pl-20 w-56 pb-10 md:w-48 relative right-5 bottom-14">
                     <img src="images/mic.jfif" alt="mic pic">
                 </div>
-                <div>
+                <div class="md: relative left-7">
                     <h1 class="text-2xl font-bold pb-5">Mic</h1>
-                     <p class="text-gray-500">IPhone, a multipurpose handheld computing device combining
+                     <p class="text-gray-500 w-80">IPhone, a multipurpose handheld computing device combining
                         mobile telephone, digital camera, music player, and personal
                         computing technologies.
                      </p>
                 </div>
             </div>
 
-            <div class="mb-20">
-                <div>
-                    <img class="w-16 h-16" src="images/keyboard.jfif" alt="keyboard pic">
+            <div class="md:flex lg:px-64">
+                <div class="pl-12 w-64 pb-7 md:w-56 relative right-5">
+                    <img src="images/keyboard.jfif" alt="keyboard pic">
                 </div>
-                <div>
+                <div class="md: relative left-4">
                     <h1 class="text-2xl font-bold pb-5">keyboard</h1>
-                     <p class="text-gray-500">IPhone, a multipurpose handheld computing device combining
+                     <p class="text-gray-500 w-80">IPhone, a multipurpose handheld computing device combining
                         mobile telephone, digital camera, music player, and personal
                         computing technologies.
                      </p>
@@ -156,7 +158,7 @@
 
     <footer class="bg-black pt-20 pb-10 pl-20">
 
-        <div class="flex flex-col items-center"> 
+        <div class="px-24 md:flex justify-around"> 
             <div class=" pb-20 w-60">
                 <h1 class="text-2xl font-bold pb-5 text-white">Links</h1>
                 <p class="text-gray-400">www.purecodes.com</p>
@@ -166,10 +168,10 @@
             <div class="pb-20 w-60">
                 <h1 class="text-2xl font-bold pb-5 text-white">Socail icons</h1>
                 <div class="flex">
-                    <img class="w-8 h-8 " src="images/facebook.png" alt="fb image">
-                    <img class="w-8 h-8" src="images/instagram.png" alt="insta image">
-                    <img class="w-8 h-8" src="images/twitter.png" alt="twitter image">
-                    <img class="w-8 h-8" src="images/linkedin.png" alt="linkedin image"> 
+                    <img class="w-8 h-8 p-0.5 " src="images/facebook.png" alt="fb image">
+                    <img class="w-8 h-8 p-0.5" src="images/instagram.png" alt="insta image">
+                    <img class="w-8 h-8 p-0.5" src="images/twitter.png" alt="twitter image">
+                    <img class="w-8 h-8 p-0.5" src="images/linkedin.png" alt="linkedin image"> 
                 </div>
             </div>
 
